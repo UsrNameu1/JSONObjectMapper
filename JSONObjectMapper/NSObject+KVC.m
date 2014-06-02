@@ -21,9 +21,8 @@
     
     for (int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
-        
         const char *propertyName = property_getName(property);
-        [propertyArray addObject:[NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding]];
+        [propertyArray addObject:@(propertyName)];
     }
     
     free(properties);
@@ -34,8 +33,7 @@
 - (id)propertyValueForKey:(NSString *)key
 {
     const char *type = property_getAttributes(class_getProperty([self class], [key UTF8String]));
-    NSString *typeString = [NSString stringWithUTF8String:type];
-    NSArray *attributes = [typeString componentsSeparatedByString:@","];
+    NSArray *attributes = [@(type) componentsSeparatedByString:@","];
     NSString *typeAttribute = attributes[0];
     NSString *propertyType = [typeAttribute substringWithRange:NSMakeRange(1, 1)];
     

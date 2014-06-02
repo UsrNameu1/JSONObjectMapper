@@ -12,7 +12,7 @@
 
 + (NSString *)stringWithJSONObject:(id)JSONObject
 {
-    NSError *error;
+    NSError *error = nil;
     NSData *jsonData =
     [NSJSONSerialization dataWithJSONObject:JSONObject
                                     options:NSJSONWritingPrettyPrinted
@@ -22,8 +22,8 @@
         DebugLog(@"%@", error);
         return nil;
     } else {
-        return [[NSString alloc] initWithData:jsonData
-                                     encoding:NSUTF8StringEncoding];
+        return [[self alloc] initWithData:jsonData
+                                 encoding:NSUTF8StringEncoding];
     }
 }
 

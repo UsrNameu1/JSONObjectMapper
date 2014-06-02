@@ -47,13 +47,13 @@
 {
     NSMutableString *descriptionString = [NSMutableString new];
     
-    [descriptionString appendString:[NSString stringWithFormat:@"base : %@\n", [super description]]];
+    [descriptionString appendString:[NSString stringWithFormat:@"%@\n", [super description]]];
     
     NSArray *allKeys = [[self class] allKeys];
     
     for (NSString *key in allKeys) {
         NSString *appendedString =
-        [NSString stringWithFormat:@"%@ : %@ \n", key, [self propertyValueForKey:key]];
+        [NSString stringWithFormat:@"%@ : %@ \n", key, [self valueForKey:key]];
         [descriptionString appendString:appendedString];
     }
     
