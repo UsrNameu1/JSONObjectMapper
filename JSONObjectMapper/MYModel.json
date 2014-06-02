@@ -1,0 +1,13 @@
+{
+    "canUpdate": true,
+    "childs": [
+               "daughter",
+               "son",
+               "musuco",
+               "musume"
+               ],
+    "degree": 3.0,
+    "identifier": 1122,
+    "name": "HOGEMOGE",
+    "number": 5
+}

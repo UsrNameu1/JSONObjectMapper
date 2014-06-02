@@ -8,6 +8,10 @@
 
 #import "MYViewController.h"
 
+#import "NSBundle+MYResource.h"
+#import "NSString+JSON.h"
+#import "MYModel.h"
+
 @interface MYViewController ()
 
 @end
@@ -17,7 +21,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *jsonString = [[NSBundle mainBundle] myModelJSONString];
+    NSDictionary *modelDictionary = jsonString.jsonObject;
+    MYModel *model = [[MYModel alloc] initWithDictionary:modelDictionary];
+    //DebugLog(@"%@",model);
+    DebugLog(@"%@",[NSString stringWithJSONObject:model.valueDictionary]);
+    
 }
 
 - (void)didReceiveMemoryWarning

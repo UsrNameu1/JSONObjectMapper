@@ -21,6 +21,11 @@
 		F7895203193C5EFF0000FE62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78951E5193C5EFF0000FE62 /* UIKit.framework */; };
 		F789520B193C5EFF0000FE62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7895209193C5EFF0000FE62 /* InfoPlist.strings */; };
 		F789520D193C5EFF0000FE62 /* JSONObjectMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F789520C193C5EFF0000FE62 /* JSONObjectMapperTests.m */; };
+		F7895218193C5FB10000FE62 /* MYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7895217193C5FB10000FE62 /* MYModel.m */; };
+		F789521A193C61070000FE62 /* MYModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F7895219193C61070000FE62 /* MYModel.json */; };
+		F789521D193C63AD0000FE62 /* NSObject+KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F789521C193C63AD0000FE62 /* NSObject+KVC.m */; };
+		F7895223193C65620000FE62 /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7895222193C65620000FE62 /* NSString+JSON.m */; };
+		F7895226193C67CC0000FE62 /* NSBundle+MYResource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7895225193C67CC0000FE62 /* NSBundle+MYResource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		F7895208193C5EFF0000FE62 /* JSONObjectMapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSONObjectMapperTests-Info.plist"; sourceTree = "<group>"; };
 		F789520A193C5EFF0000FE62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F789520C193C5EFF0000FE62 /* JSONObjectMapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONObjectMapperTests.m; sourceTree = "<group>"; };
+		F7895216193C5FB10000FE62 /* MYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYModel.h; sourceTree = "<group>"; };
+		F7895217193C5FB10000FE62 /* MYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYModel.m; sourceTree = "<group>"; };
+		F7895219193C61070000FE62 /* MYModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MYModel.json; sourceTree = "<group>"; };
+		F789521B193C63AD0000FE62 /* NSObject+KVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVC.h"; sourceTree = "<group>"; };
+		F789521C193C63AD0000FE62 /* NSObject+KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVC.m"; sourceTree = "<group>"; };
+		F7895221193C65620000FE62 /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSON.h"; sourceTree = "<group>"; };
+		F7895222193C65620000FE62 /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSON.m"; sourceTree = "<group>"; };
+		F7895224193C67CC0000FE62 /* NSBundle+MYResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MYResource.h"; sourceTree = "<group>"; };
+		F7895225193C67CC0000FE62 /* NSBundle+MYResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MYResource.m"; sourceTree = "<group>"; };
+		F7895227193C69180000FE62 /* MYDebugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYDebugger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,15 @@
 				F78951F7193C5EFF0000FE62 /* MYViewController.m */,
 				F78951F9193C5EFF0000FE62 /* Images.xcassets */,
 				F78951E8193C5EFF0000FE62 /* Supporting Files */,
+				F7895216193C5FB10000FE62 /* MYModel.h */,
+				F7895217193C5FB10000FE62 /* MYModel.m */,
+				F7895219193C61070000FE62 /* MYModel.json */,
+				F789521B193C63AD0000FE62 /* NSObject+KVC.h */,
+				F789521C193C63AD0000FE62 /* NSObject+KVC.m */,
+				F7895221193C65620000FE62 /* NSString+JSON.h */,
+				F7895222193C65620000FE62 /* NSString+JSON.m */,
+				F7895224193C67CC0000FE62 /* NSBundle+MYResource.h */,
+				F7895225193C67CC0000FE62 /* NSBundle+MYResource.m */,
 			);
 			path = JSONObjectMapper;
 			sourceTree = "<group>";
@@ -129,6 +153,7 @@
 				F78951E9193C5EFF0000FE62 /* JSONObjectMapper-Info.plist */,
 				F78951EA193C5EFF0000FE62 /* InfoPlist.strings */,
 				F78951ED193C5EFF0000FE62 /* main.m */,
+				F7895227193C69180000FE62 /* MYDebugger.h */,
 				F78951EF193C5EFF0000FE62 /* JSONObjectMapper-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -232,6 +257,7 @@
 				F78951FA193C5EFF0000FE62 /* Images.xcassets in Resources */,
 				F78951EC193C5EFF0000FE62 /* InfoPlist.strings in Resources */,
 				F78951F5193C5EFF0000FE62 /* Main.storyboard in Resources */,
+				F789521A193C61070000FE62 /* MYModel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78951F8193C5EFF0000FE62 /* MYViewController.m in Sources */,
+				F7895223193C65620000FE62 /* NSString+JSON.m in Sources */,
 				F78951F2193C5EFF0000FE62 /* MYAppDelegate.m in Sources */,
+				F789521D193C63AD0000FE62 /* NSObject+KVC.m in Sources */,
 				F78951EE193C5EFF0000FE62 /* main.m in Sources */,
+				F7895226193C67CC0000FE62 /* NSBundle+MYResource.m in Sources */,
+				F7895218193C5FB10000FE62 /* MYModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
