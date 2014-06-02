@@ -34,6 +34,12 @@
 - (NSDictionary *)valueDictionary
 {
     NSArray *allKeys = [[self class] allKeys];
+    return [self dictionaryWithValuesForKeys:allKeys];
+}
+
+- (NSDictionary *)propertyValueDictionary
+{
+    NSArray *allKeys = [[self class] allKeys];
     return [self dictionaryWithPropertyValuesForKeys:allKeys];
 }
 

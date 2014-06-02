@@ -17,8 +17,14 @@
     [NSJSONSerialization dataWithJSONObject:JSONObject
                                     options:NSJSONWritingPrettyPrinted
                                       error:&error];
-    return [[NSString alloc] initWithData:jsonData
-                                 encoding:NSUTF8StringEncoding];
+    
+    if (error) {
+        DebugLog(@"%@", error);
+        return nil;
+    } else {
+        return [[NSString alloc] initWithData:jsonData
+                                     encoding:NSUTF8StringEncoding];
+    }
 }
 
 - (id)jsonObject

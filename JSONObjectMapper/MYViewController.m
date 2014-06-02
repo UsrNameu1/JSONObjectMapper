@@ -25,8 +25,8 @@
     NSString *jsonString = [[NSBundle mainBundle] myModelJSONString];
     NSDictionary *modelDictionary = jsonString.jsonObject;
     MYModel *model = [[MYModel alloc] initWithDictionary:modelDictionary];
-    //DebugLog(@"%@",model);
     DebugLog(@"%@",[NSString stringWithJSONObject:model.valueDictionary]);
+    DebugLog(@"%@",[NSString stringWithJSONObject:model.propertyValueDictionary]);
     
 }
 

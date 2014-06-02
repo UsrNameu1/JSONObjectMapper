@@ -39,6 +39,7 @@
     NSString *typeAttribute = attributes[0];
     NSString *propertyType = [typeAttribute substringWithRange:NSMakeRange(1, 1)];
     
+    // charの型情報と同一になってしまっているためcharのプロパティに関してもこのIF文を通ります。
     if ([propertyType isEqualToString:@(@encode(BOOL))]) {
         BOOL boolValue = [[self valueForKey:key] boolValue];
         return [NSNumber numberWithBool:boolValue];
@@ -52,7 +53,7 @@
     NSMutableDictionary *dictionary = [NSMutableDictionary new];
     
     for (NSString *key in keys) {
-        id value = [self valueForKey:key];
+        id value = [self propertyValueForKey:key];
         dictionary[key] = value;
     }
     
