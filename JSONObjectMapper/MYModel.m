@@ -26,7 +26,7 @@
 {
     for (NSString *key in dictionary) {
         if ([self respondsToSelector:NSSelectorFromString(key)]) {
-            [self setValue:dictionary[key] forKeyPath:key];
+            [self setValue:dictionary[key] forKey:key];
         }
     }
 }
