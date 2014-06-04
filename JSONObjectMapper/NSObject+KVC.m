@@ -32,8 +32,19 @@
 
 - (id)propertyValueForKey:(NSString *)key
 {
-    const char *type = property_getAttributes(class_getProperty([self class], [key UTF8String]));
+    objc_property_t property = class_getProperty([self class], [key UTF8String]);
+    
+    if (!property) {
+        return [NSNull null];
+    }
+    
+    const char *type = property_getAttributes(property);
     NSArray *attributes = [@(type) componentsSeparatedByString:@","];
+    
+    if (!attributes) {
+        return [NSNull null];
+    }
+    
     NSString *typeAttribute = attributes[0];
     NSString *propertyType = [typeAttribute substringWithRange:NSMakeRange(1, 1)];
     

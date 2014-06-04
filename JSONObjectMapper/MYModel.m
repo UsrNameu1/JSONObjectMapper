@@ -16,6 +16,7 @@
 {
     self = [super init];
     if (self) {
+        //[self setValuesForKeysWithDictionary:dictionary];
         [self configureValuesWithDictionary:dictionary];
     }
     
@@ -24,6 +25,7 @@
 
 - (void)configureValuesWithDictionary:(NSDictionary *)dictionary
 {
+    // jsonとModelのキーに不一致がなくNSString,NSNumber,NSInteger等で構成されるModelについてはsetValuesForKeysWithDictionaryメソッドでも代用できます
     for (NSString *key in dictionary) {
         if ([self respondsToSelector:NSSelectorFromString(key)]) {
             [self setValue:dictionary[key] forKey:key];

@@ -21,7 +21,7 @@
 + (NSArray *)allKeys;
 
 /**
- *  BOOL値に関する処理を挟んだvalueForKeyメソッドです。
+ *  BOOL値に関する処理を挟んだvalueForKeyメソッドです。値が存在しない場合は必ずNSNullを返します。
  *  BOOL値のエンコードはcharと同等であるため、charのプロパティを持つオブジェクトに対しては使用に注意を要します。
  *
  *  @param key キー文字列
